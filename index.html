@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Panadería Delicia</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <header class="hero">
+    <nav class="nav-bar">
+      <h1>Panadería Delicia</h1>
+      <ul class="menu">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#pedidos">Pedidos</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2>Sweet Treats, Perfect Eats</h2>
+      <p>Delicias horneadas con amor cada día</p>
+      <a class="btn" href="#productos">Ver productos</a>
+      <div class="cart-icon-hero" id="carrito-btn">
+        <div class="cart-circle">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="contador-carrito">0</span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="carrito-container" id="carrito-container">
+    <div class="carrito-header">
+      <h3>Tu Carrito</h3>
+      <button id="cerrar-carrito"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="carrito-productos" id="carrito-productos">
+    </div>
+    <div class="carrito-footer">
+      <div class="total">
+        <span>Total:</span>
+        <span id="carrito-total">S/0.00</span>
+      </div>
+      <button class="btn-pagar">Realizar Pedido</button>
+    </div>
+  </div>
+  <div class="carrito-overlay" id="carrito-overlay"></div>
+
+  <section id="productos" class="productos">
+    <h2>Top Productos</h2>
+    <div class="grid-productos">
+      <div class="card" data-id="1">
+        <img src="img/pan.jpg" alt="Pan">
+        <h3>Pan Artesanal</h3>
+        <p class="precio">S/4.00</p>
+        <button class="agregar-carrito">Agregar</button>
+      </div>
+      <div class="card" data-id="2">
+        <img src="img/bizcocho.jpg" alt="Bizcocho">
+        <h3>Bizcocho</h3>
+        <p class="precio">S/10.00</p>
+        <button class="agregar-carrito">Agregar</button>
+      </div>
+      <div class="card" data-id="3">
+        <img src="img/pizzascaseras.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p class="precio">S/10.00</p>
+        <button class="agregar-carrito">Agregar</button>
+      </div>
+      <div class="card" data-id="4">
+        <img src="img/pionono.jpg" alt="Pionono">
+        <h3>Pionono</h3>
+        <p class="precio">S/10.00</p>
+        <button class="agregar-carrito">Agregar</button>
+      </div>
+      <div class="card" data-id="5">
+        <img src="img/piedemanzana.jpg" alt="Pai">
+        <h3>PAI</h3>
+        <p class="precio">S/10.00</p>
+        <button class="agregar-carrito">Agregar</button>
+      </div>
+      <div class="card" data-id="6">
+        <img src="img/tortahelada.jpg" alt="TORTA">
+        <h3>TORTA</h3>
+        <p class="precio">S/10.00</p>
+        <button class="agregar-carrito">Agregar</button>
+      </div>
+    </div>
+  </section>
+  <section class="promo">
+    <h2>20% de descuento en tu primer pedido</h2>
+    <p>¡Aprovecha nuestra promoción especial!</p>
+    <a class="btn" href="#pedidos">Pedir ahora</a>
+  </section>
+
+  <section id="nosotros" class="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>Panadería familiar con recetas tradicionales y pasión por el pan y la pastelería.</p>
+  </section>
+
+  <section id="pedidos" class="pedidos">
+    <h2>Haz tu Pedido</h2>
+    <form>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre">
+
+      <label for="producto">Producto:</label>
+      <input type="text" id="producto" name="producto">
+
+      <label for="cantidad">Cantidad:</label>
+      <input type="number" id="cantidad" name="cantidad" min="1">
+
+      <input type="submit" value="Enviar Pedido">
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>Contacto</h3>
+        <p>📞 987 654 321</p>
+        <p>📧 panaderiadelicia@gmail.com</p>
+      </div>
+      <div>
+        <h3>Redes</h3>
+        <p>Facebook · Instagram · WhatsApp</p>
+      </div>
+      <div>
+        <h3>Explora</h3>
+        <p>Inicio · Productos · Nosotros · Pedidos</p>
+      </div>
+    </div>
+    <p class="copy">&copy; 2025 Panadería Delicia. Todos los derechos reservados.</p>
+  </footer>
+  <script src="carrito.js"></script>
+</body>
+</html>
